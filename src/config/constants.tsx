@@ -10,8 +10,10 @@ import SmlLogo from "@components/Svgs/SmlLogo";
 import USDC from "@components/Svgs/USDC";
 import USDT from "@components/Svgs/USDT";
 import TabEmptyBoxRow from "@views/Farm/components/TabEmptyBoxRow";
+
 import TopFarms from "@views/Farm/components/TopFarms";
-import { Farm, FarmTab, Network } from "./types";
+
+import { Farm, FarmTab, HeaderNavigationItems } from "./types";
 
 export const farmTabs: FarmTab[] = [
   {
@@ -149,5 +151,29 @@ export const networks: Network[] = [
     color: "rgb(52, 70, 139)",
     icon: <Fantom />,
     name: "Fantom",
+  },
+];
+export const farms: Farm[] = [];
+
+export const headerNavigationItems: HeaderNavigationItems[] = [
+  {
+    text: "Transfer",
+    url: "#",
+  },
+  {
+    text: "Pool",
+    url: "#",
+  },
+  {
+    text: "Farming",
+    url: "#",
+  },
+  {
+    text: "Stake",
+    url: "#",
+  },
+  {
+    text: "Overview",
+    url: "#",
   },
 ];

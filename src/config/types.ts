@@ -30,3 +30,7 @@ export type Network = {
   bgColor: string;
   color: string;
 };
+export type HeaderNavigationItems = {
+  text: string;
+  url: string;
+};
