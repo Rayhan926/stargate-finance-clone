@@ -14,3 +14,8 @@ export type Farm = {
   lpt: string;
   liquidity: string;
 };
+
+export type HeaderNavigationItems = {
+  text: string;
+  url: string;
+};

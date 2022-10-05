@@ -1,5 +1,5 @@
 import TabEmptyBoxRow from "@views/Farm/components/TabEmptyBoxRow";
-import { Farm, FarmTab } from "./types";
+import { Farm, FarmTab, HeaderNavigationItems } from "./types";
 
 export const farmTabs: FarmTab[] = [
   {
@@ -21,3 +21,26 @@ export const farmTabs: FarmTab[] = [
 ];
 
 export const farms: Farm[] = [];
+
+export const headerNavigationItems: HeaderNavigationItems[] = [
+  {
+    text: "Transfer",
+    url: "#",
+  },
+  {
+    text: "Pool",
+    url: "#",
+  },
+  {
+    text: "Farming",
+    url: "#",
+  },
+  {
+    text: "Stake",
+    url: "#",
+  },
+  {
+    text: "Overview",
+    url: "#",
+  },
+];

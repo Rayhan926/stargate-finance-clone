@@ -1,3 +1,4 @@
+import { headerNavigationItems } from "@config/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -76,16 +77,23 @@ function Header() {
           </svg>
         </div>
 
-        <nav>
-          <ul>
-            <li>
-              <a href="">sasa</a>
-            </li>
+        <nav className="hidden md:block">
+          <ul className="flex items-center">
+            {headerNavigationItems.map(({ text, url }, i) => (
+              <li key={i} className="px-[1.25rem]">
+                <a
+                  href={url}
+                  className="text-[#757575] font-roc-grotesk font-medium text-[0.875rem] inline-block opacity-[0.7]"
+                >
+                  {text}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
         <div>
-          <button className="group relative whitespace-nowrap bg-[#cfcece] hover:bg-[#bcbcbc] duration-200 px-4 pt-[13px] leading-4 pb-[11px] font-roc-grotesk font-medium text-black text-[0.875rem] rounded-xl">
+          <button className="group relative whitespace-nowrap bg-[#cfcece] tracking-[0.04em] hover:bg-[#bcbcbc] duration-200 px-4 pt-[13px] leading-4 pb-[11px] font-roc-grotesk font-medium text-black text-[0.875rem] rounded-xl">
             Connect Wallet
             <span className="inline-block absolute w-0 group-hover:w-[calc(100%-32px)] h-px bg-black left-4 bottom-2.5 duration-200"></span>
           </button>
