@@ -4,12 +4,12 @@ import React from "react";
 
 const TopFarms = () => {
   return (
-    <div className="grid grid-cols-[repeat(4,1fr)] gap-[1.5rem] overflow-x-auto scrollbar_none">
+    <div className="grid grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(4,1fr)] gap-[1.5rem] overflow-x-auto scrollbar_none">
       {topFarms.map(
         ({ logo, apy, farmName, liquidity, logoSml, lpt, network }, i) => {
           return (
             <div
-              className="min-w-[258px] min-h-[158px] rounded-[0.75rem] bg-[#232323] p-4 border hover:border-white border-transparent duration-300"
+              className="min-w-[258px] cursor-pointer min-h-[158px] rounded-[0.75rem] bg-[#232323] p-4 border hover:border-white border-transparent duration-300"
               key={i}
             >
               <div className="flex flex-col h-full">
