@@ -9,7 +9,7 @@ const FarmTab = () => {
   return (
     <section className="mt-24">
       <div className="container">
-        <div className="flex items-center gap-7 mb-6">
+        <div className="flex items-center gap-7 mb-6 overflow-x-auto scrollbar_none whitespace-nowrap">
           {farmTabs.map((tab, i) => {
             const isActive = i === activeTabIndex;
             return (

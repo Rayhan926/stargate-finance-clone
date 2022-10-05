@@ -11,7 +11,8 @@ export type Netoworks =
   | "bnb"
   | "arbitrum"
   | "ethereum"
-  | "fantom";
+  | "fantom"
+  | "matic";
 
 export type Farm = {
   logo: ReactNode;
@@ -30,7 +31,30 @@ export type Network = {
   bgColor: string;
   color: string;
 };
+
 export type HeaderNavigationItems = {
   text: string;
   url: string;
+};
+
+export type SelectOption = {
+  label: string;
+  icon?: ReactNode;
+  value: string;
+};
+export type SelectProps = {
+  options: SelectOption[];
+  value: SelectOption;
+  onChange: (option: SelectOption) => void;
+  label: string;
+};
+
+export type AllFarm = {
+  name: {
+    title: string;
+    icon: ReactNode;
+  };
+  network: Netoworks;
+  liquidity: string;
+  apy: string;
 };
