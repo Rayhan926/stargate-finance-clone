@@ -260,3 +260,7 @@ body {
     @apply max-w-[820px] mx-auto;
   }
 }
+
+.scrollbar_none::-webkit-scrollbar {
+  display: none;
+}
