@@ -12,3 +12,9 @@
 * {
   @apply font-sans;
 }
+
+@layer components {
+  .container {
+    @apply max-w-[11044px] px-5 mx-auto;
+  }
+}
