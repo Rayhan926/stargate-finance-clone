@@ -1,10 +1,11 @@
+import HomePage from "@views/Home";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="text-[50px] font-medium">
-      Stargate is a fully composable
-    </div>
+    <>
+      <HomePage />
+    </>
   );
 };
 

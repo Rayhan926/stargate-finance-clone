@@ -256,4 +256,7 @@ body {
   .container {
     @apply max-w-[1104px] mx-auto;
   }
+  .container-sm {
+    @apply max-w-[820px] mx-auto;
+  }
 }
