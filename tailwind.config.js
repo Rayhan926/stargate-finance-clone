@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roc Grotesk", "sans-serif"],
+        "roc-grotesk": ["roc-grotesk", "sans-serif"],
+        "roc-grotesk-regular": ["Roc Grotesk Regular", "sans-serif"],
+        "roc-grotesk-medium": ["Roc Grotesk Medium", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
     },
