@@ -9,6 +9,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-black text-white;
+}
+
 * {
   @apply font-sans;
 }
