@@ -1,13 +1,11 @@
-import Header from "@components/Header";
 import React from "react";
 import HeroSection from "./component/HeroSection";
 
 function HomePage() {
   return (
-    <>
-      <Header />
+    <div className="strokes_bg">
       <HeroSection />
-    </>
+    </div>
   );
 }
 

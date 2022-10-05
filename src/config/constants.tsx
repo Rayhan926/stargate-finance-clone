@@ -201,7 +201,7 @@ export const headerNavigationItems: HeaderNavigationItems[] = [
   },
   {
     text: "Farming",
-    url: "#",
+    url: "/farm",
   },
   {
     text: "Stake",

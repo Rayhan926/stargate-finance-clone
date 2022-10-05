@@ -24,7 +24,7 @@ const AllFarmsTabs = () => {
                   onClick={() => setActiveTabIndex(i)}
                   key={i}
                   className={cx(
-                    "font-roc-grotesk text-base",
+                    "font-poppins text-base",
                     isActive
                       ? "underline text-white"
                       : "text-[#999999] hover:text-white",

@@ -3,7 +3,7 @@ import { cx } from "@utils";
 import React, { useState } from "react";
 
 const FarmTab = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(3);
 
   const activeTabBody = farmTabs[activeTabIndex].component;
   return (
@@ -17,7 +17,7 @@ const FarmTab = () => {
                 onClick={() => setActiveTabIndex(i)}
                 key={i}
                 className={cx(
-                  "font-roc-grotesk text-base",
+                  "font-poppins text-base",
                   isActive
                     ? "underline text-white"
                     : "text-[#999999] hover:text-white",

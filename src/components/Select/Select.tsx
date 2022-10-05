@@ -38,7 +38,7 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
             {value?.icon && (
               <span className="shrink-0 w-[18px]">{value?.icon}</span>
             )}
-            <p className="font-roboto">{value.label}</p>
+            <p className="font-poppins">{value.label}</p>
           </div>
 
           <AiOutlineCaretDown

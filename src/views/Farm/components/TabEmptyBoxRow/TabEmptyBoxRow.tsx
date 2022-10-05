@@ -5,7 +5,7 @@ const TabEmptyBoxRow = () => {
     <div className="grid grid-cols-[repeat(4,1fr)] overflow-x-auto gap-[1.5rem] scrollbar_none">
       {[1, 2, 3, 4].map((e) => (
         <div
-          className="min-w-[258px] min-h-[158px] rounded-[0.75rem] opacity-[0.2] border border-[#999]"
+          className="min-w-[258px] min-h-[168px] rounded-[0.75rem] opacity-[0.2] border border-[#999]"
           key={e}
         ></div>
       ))}

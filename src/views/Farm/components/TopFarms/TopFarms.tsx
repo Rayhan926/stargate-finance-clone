@@ -4,12 +4,12 @@ import React from "react";
 
 const TopFarms = () => {
   return (
-    <div className="grid grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(4,1fr)] gap-[1.5rem] overflow-x-auto scrollbar_none">
+    <div className="grid grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(4,1fr)] gap-[13px] overflow-x-auto scrollbar_none">
       {topFarms.map(
         ({ logo, apy, farmName, liquidity, logoSml, lpt, network }, i) => {
           return (
             <div
-              className="min-w-[258px] cursor-pointer min-h-[158px] rounded-[0.75rem] bg-[#232323] p-4 border hover:border-white border-transparent duration-300"
+              className="min-w-[258px] cursor-pointer min-h-[168px] rounded-[0.75rem] bg-[#31333C] p-4"
               key={i}
             >
               <div className="flex flex-col h-full">
@@ -27,12 +27,10 @@ const TopFarms = () => {
 
                     {/** Bottom left --Start-- */}
                     <div>
-                      <p className="text-xs text-[#999999] font-roboto mb-0.5">
+                      <p className="text-xs text-[#999999] font-poppins mb-0.5">
                         Farm
                       </p>
-                      <h3 className="text-[24px] leading-[28px] font-roc-grotesk">
-                        {farmName}
-                      </h3>
+                      <h3 className="text-lg font-poppins">{farmName}</h3>
                     </div>
                     {/** Bottom left --End-- */}
                   </div>
@@ -43,12 +41,10 @@ const TopFarms = () => {
                       <NetworkLabel network={network} />
                     </div>
                     <div>
-                      <p className="text-xs text-[#999999] font-roboto mb-0.5">
+                      <p className="text-xs text-[#999999] font-poppins mb-0.5">
                         APY
                       </p>
-                      <h3 className="text-[24px] leading-[28px] font-roboto">
-                        {apy}
-                      </h3>
+                      <h3 className="text-lg font-poppins">{apy}</h3>
                     </div>
                   </div>
                   {/** Top Right --End-- */}
@@ -58,16 +54,16 @@ const TopFarms = () => {
                 {/** Bottom Start --Start-- */}
                 <div className="h-12 flex items-end justify-between">
                   <div>
-                    <p className="text-xs text-[#999999] font-roboto mb-0.5">
-                      LPT Available to Stake
+                    <p className="text-xs text-[#999999] font-poppins mb-0.5">
+                      LPT Available to <br /> Stake
                     </p>
-                    <p className="text-base font-roboto">{lpt}</p>
+                    <p className="text-base font-poppins">{lpt}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-[#999999] font-roboto mb-0.5">
+                    <p className="text-xs text-[#999999] font-poppins mb-0.5">
                       Liquidity
                     </p>
-                    <p className="text-base font-roboto">{liquidity}</p>
+                    <p className="text-base font-poppins">{liquidity}</p>
                   </div>
                 </div>
                 {/** Bottom Start --End-- */}

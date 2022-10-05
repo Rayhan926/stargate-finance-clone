@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         "roc-grotesk": ["roc-grotesk", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      colors: {
+        primary: "#9C5DDC",
       },
     },
   },

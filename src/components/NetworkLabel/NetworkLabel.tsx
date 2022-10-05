@@ -19,20 +19,20 @@ const NetworkLabel = ({
   if (!findNetwork) return <div>N</div>;
   return (
     <div
-      style={{
-        background: findNetwork?.bgColor,
-        color: findNetwork?.color,
-      }}
+      // style={{
+      //   background: findNetwork?.bgColor,
+      //   color: findNetwork?.color,
+      // }}
       className={cx(
-        "rounded-[0.25rem] font-roboto font-normal inline-flex items-center gap-[3px]",
+        "rounded-[0.25rem] font-poppins font-normal inline-flex items-center gap-[3px] bg-primary/10 text-primary",
         isSmall
-          ? "text-[12px] leading-[12px] px-1 h-5"
-          : "text-[14px] leading-[19px] px-1.5 h-7",
+          ? "text-[12px] leading-[12px] py-[5px] px-4"
+          : "text-[14px] leading-[19px] px-5 py-[7px]",
       )}
     >
-      <span className={cx("shrink-0", isSmall ? "w-[14px]" : "w-4")}>
+      {/* <span className={cx("shrink-0", isSmall ? "w-[14px]" : "w-4")}>
         {findNetwork?.icon}
-      </span>
+      </span> */}
       {findNetwork?.name}
     </div>
   );
