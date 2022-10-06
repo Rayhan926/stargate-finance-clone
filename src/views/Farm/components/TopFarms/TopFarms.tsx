@@ -9,13 +9,17 @@ const TopFarms = () => {
         ({ logo, apy, farmName, liquidity, logoSml, lpt, network }, i) => {
           return (
             <div
-              className="min-w-[258px] cursor-pointer min-h-[168px] rounded-[0.75rem] bg-[#31333C] p-4"
+              className="min-w-[258px] cursor-pointer min-h-[175px] rounded-[0.75rem] bg-[#31333C] p-4 relative"
               key={i}
             >
-              <div className="flex flex-col h-full">
+              {/** divider --Start-- */}
+              <div className="w-px h-[70px] bg-white/10 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
+              {/** divider --End-- */}
+
+              <div className="flex flex-col h-full gap-3">
                 {/** Top --Start-- */}
                 <div className="flex flex-[1] justify-between">
-                  <div className="flex items-start flex-col justify-between">
+                  <div className="flex items-start flex-col justify-between gap-3">
                     {/** Top left --Start-- */}
                     <div className="w-6 h-6 inline-block relative bg-[#d9d9d9] rounded-full">
                       {logo}
@@ -36,7 +40,7 @@ const TopFarms = () => {
                   </div>
 
                   {/** Top Right --Start-- */}
-                  <div className="flex text-right items-end flex-col justify-between">
+                  <div className="flex text-right items-end flex-col justify-between gap-3">
                     <div>
                       <NetworkLabel network={network} />
                     </div>
@@ -52,7 +56,7 @@ const TopFarms = () => {
                 {/** Top --End-- */}
 
                 {/** Bottom Start --Start-- */}
-                <div className="h-12 flex items-end justify-between">
+                <div className="flex justify-between">
                   <div>
                     <p className="text-xs text-[#999999] font-poppins mb-0.5">
                       LPT Available to <br /> Stake

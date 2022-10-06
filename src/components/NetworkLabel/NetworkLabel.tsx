@@ -24,10 +24,10 @@ const NetworkLabel = ({
       //   color: findNetwork?.color,
       // }}
       className={cx(
-        "rounded-[0.25rem] font-poppins font-normal inline-flex items-center gap-[3px] bg-primary/10 text-primary",
+        "rounded-[0.25rem] font-poppins font-normal inline-flex items-center gap-[3px] text-primary",
         isSmall
-          ? "text-[12px] leading-[12px] py-[5px] px-4"
-          : "text-[14px] leading-[19px] px-5 py-[7px]",
+          ? "text-[12px] leading-[12px] py-[5px] px-4 bg-primary/10"
+          : "text-[14px] leading-[19px] px-5 py-[7px] bg-primary/30",
       )}
     >
       {/* <span className={cx("shrink-0", isSmall ? "w-[14px]" : "w-4")}>

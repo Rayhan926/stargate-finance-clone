@@ -8,7 +8,7 @@ import React from "react";
 function Header() {
   const router = useRouter();
   return (
-    <header className="fixed top-0 left-0 w-full flex items-center pt-8 pb-5 px-[60px] z-[999] bg-black">
+    <header className="fixed top-0 left-0 w-full flex items-center pt-8 pb-5 px-5 lg:px-[60px] z-[999] bg-black">
       <div className="flex justify-between items-center w-full">
         <div>
           <Link href={"/"}>
@@ -18,7 +18,7 @@ function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="flex items-center">
             {headerNavigationItems.map(({ text, url }, i) => {
               const isActive = url === router.pathname;

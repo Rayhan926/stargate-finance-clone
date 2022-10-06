@@ -9,7 +9,7 @@ body {
 }
 
 * {
-  @apply font-sans;
+  @apply font-poppins;
 }
 
 @layer components {
@@ -18,6 +18,9 @@ body {
   }
   .container-sm {
     @apply max-w-[820px] mx-auto;
+  }
+  .__body_text {
+    @apply text-base text-white opacity-80;
   }
 }
 
@@ -29,4 +32,8 @@ body {
   background-image: url("/img/steokes.png");
   background-repeat: no-repeat;
   background-position: top;
+}
+
+.all_farms_table tbody tr:nth-child(odd) {
+  background: #5a5c63;
 }

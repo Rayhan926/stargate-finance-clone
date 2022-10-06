@@ -17,7 +17,7 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
     setisOpen(false);
   };
 
-  usePopper(referenceElement, popperElement);
+  const { styles, attributes } = usePopper(referenceElement, popperElement);
 
   useClickAway(clickAwayRef, () => {
     setisOpen(false);
@@ -25,13 +25,11 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
 
   return (
     <div className="w-auto md:w-[184px]">
-      <p className="text-[13px] font-light mb-0.5 leading-[20px] text-[#999]">
-        Token
-      </p>
+      <p className="mb-2.5 text-white">Token</p>
       <div ref={clickAwayRef} className="relative">
         <div
           onClick={() => setisOpen((prev) => !prev)}
-          className="flex items-center gap-3 justify-between p-3 bg-[#232323] hover:bg-[#2d2d2d] rounded-[0.75rem] border border-[#323232] group cursor-pointer"
+          className="flex items-center gap-3 justify-between p-3 bg-[#3C344B] hover:bg-[#2d2d2d] rounded-[0.75rem] border border-[#fff]/10 group cursor-pointer"
           ref={setReferenceElement}
         >
           <div className="flex items-center gap-2.5">
@@ -50,10 +48,15 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
           />
         </div>
         {/** Drop down --Start-- */}
-        <div ref={setPopperElement} className="w-full">
+        <div
+          ref={setPopperElement}
+          style={styles.popper}
+          {...attributes.popper}
+          className="w-full"
+        >
           <div
             className={cx(
-              "w-full absolute min-w-[184px] bg-[#232323] rounded-[0.75rem] border border-[#323232] duration-200 origin-top overflow-hidden",
+              "w-full min-w-[184px] bg-[#232323] rounded-[0.75rem] border border-[#323232] duration-200 origin-top overflow-hidden",
               isOpen
                 ? "scale-100 opacity-100 pointer-events-auto"
                 : "pointer-events-none opacity-0 scale-90",

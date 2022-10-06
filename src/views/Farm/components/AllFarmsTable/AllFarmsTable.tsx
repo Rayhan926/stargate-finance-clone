@@ -8,10 +8,10 @@ const AllFarmsTable = () => {
   return (
     <>
       {/** Table --Start-- */}
-      <div className="w-full overflow-x-auto rounded-[0.75rem] mt-4">
-        <table className="w-full bg-[#232323] min-w-[490px]">
+      <div className="w-full overflow-x-auto rounded-[0.75rem] mt-4 border-white/20 border">
+        <table className="w-full bg-[#31333C] min-w-[490px] all_farms_table">
           <thead>
-            <tr className="[&>th]:px-8 text-[#999] text-sm [&>th]:font-normal font-poppins text-left [&>th]:h-[69px]">
+            <tr className="[&>th]:px-8 text-white [&>th]:font-normal font-poppins text-left [&>th]:h-[69px]">
               <th>Name</th>
               <th>Network</th>
               <th>Liquidity</th>

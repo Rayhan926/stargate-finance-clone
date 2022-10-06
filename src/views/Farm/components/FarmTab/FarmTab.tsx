@@ -18,9 +18,7 @@ const FarmTab = () => {
                 key={i}
                 className={cx(
                   "font-poppins text-base",
-                  isActive
-                    ? "underline text-white"
-                    : "text-[#999999] hover:text-white",
+                  isActive ? " text-white" : "text-[#999999] hover:text-white",
                 )}
               >
                 {tab.title}

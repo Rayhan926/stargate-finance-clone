@@ -19,6 +19,8 @@ import USDC from "@components/Svgs/USDC";
 import USDT from "@components/Svgs/USDT";
 import AllFarmsTable from "@views/Farm/components/AllFarmsTable";
 import TabEmptyBoxRow from "@views/Farm/components/TabEmptyBoxRow";
+import { BiTransfer, BiBarChartSquare } from "react-icons/bi";
+import { MdWaves } from "react-icons/md";
 
 import TopFarms from "@views/Farm/components/TopFarms";
 import YourFarmsTable from "@views/Farm/components/YourFarmsTable";
@@ -27,8 +29,10 @@ import {
   AllFarm,
   Farm,
   FarmTab,
+  FooterLinks,
   HeaderNavigationItems,
   Network,
+  RoadmapBlockProps,
   SelectOption,
 } from "./types";
 
@@ -194,22 +198,51 @@ export const headerNavigationItems: HeaderNavigationItems[] = [
   {
     text: "Transfer",
     url: "#",
+    icon: <BiTransfer size={18} />,
   },
   {
     text: "Pool",
-    url: "#",
+    url: "/pool",
+    icon: <MdWaves size={18} />,
   },
   {
     text: "Farming",
     url: "/farm",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        className="scale-[0.9]"
+      >
+        <path
+          d="M15 10.8V9a2.865 2.865 0 0 0-1-2.2V4h1V2h-2a.945.945 0 0 0-1 1v3h-1.3L8.9.7A.961.961 0 0 0 8 0H1v2h2v5.3a4.552 4.552 0 0 0-3 4.2A4.475 4.475 0 0 0 8.7 13H10a3 3 0 0 0 6 0 2.865 2.865 0 0 0-1-2.2ZM5 2h2.3l1.3 4H5Zm-.5 12a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5Zm8.5 0a1 1 0 1 1 1-1 .945.945 0 0 1-1 1Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    ),
   },
   {
     text: "Stake",
-    url: "#",
+    url: "/stake",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={16}
+        height="13.995"
+        className="jss853"
+      >
+        <g fill="currentColor">
+          <path d="m15.082 8.166-5.8 3.478a2.5 2.5 0 0 1-2.57 0L.918 8.166l-.675.4a.5.5 0 0 0 0 .858l7.5 4.5a.5.5 0 0 0 .514 0l7.5-4.5a.5.5 0 0 0 0-.858Z" />
+          <path d="m15.757 4.571-7.5-4.5a.5.5 0 0 0-.514 0l-7.5 4.5a.5.5 0 0 0 0 .858l7.5 4.5a.5.5 0 0 0 .514 0l7.5-4.5a.5.5 0 0 0 0-.858Z" />
+        </g>
+      </svg>
+    ),
   },
   {
     text: "Overview",
-    url: "#",
+    url: "/overview",
+    icon: <BiBarChartSquare size={18} />,
   },
 ];
 
@@ -419,3 +452,97 @@ export const allFarms: AllFarm[] = [
     apy: "5.05%",
   },
 ];
+
+export const roadmapBlocks: RoadmapBlockProps[] = [
+  {
+    imgSrc: "/img/transfer.png",
+    labelText: "Transfer",
+    title:
+      "Swap 1:1 native assets cross-chain, accessing Stargate’s unified liquidity pools.",
+    subtitle:
+      "Stargate transfers have instant guaranteed finality; a transfer submitted on the source chain is guaranteed on the destination.",
+    progressPercentage: 30,
+  },
+  {
+    imgSrc: "/img/pools.png",
+    labelText: "Pools",
+    title:
+      "Add liquidity to Stargate’s Omnichain protocol and earn stablecoin rewards on every Stargate transfer.",
+    subtitle:
+      "Liquidity providers can also farm their LP tokens to receive STG token rewards.",
+    progressPercentage: 50,
+    layout: "reverse",
+  },
+  {
+    imgSrc: "/img/farms.png",
+    labelText: "Farms",
+    title:
+      "Stargate liquidity providers can farm their LP tokens in exchange for STG rewards.",
+    subtitle: "Earn STG and become a member of the Stargate community.",
+    progressPercentage: 70,
+  },
+  {
+    imgSrc: "/img/stake.png",
+    labelText: "Stake",
+    title:
+      "STG holders can lock their STG tokens to receive veSTG, Stargate’s governance token.",
+    subtitle:
+      "The longer users stake their STG tokens, the more veSTG they will receive.",
+    progressPercentage: 100,
+    layout: "reverse",
+  },
+];
+
+export const footerLinks: { [key: string]: FooterLinks } = {
+  protocol: {
+    title: "Protocol",
+    links: [
+      {
+        text: "Snapshot",
+        url: "#",
+      },
+      {
+        text: "Commonwealth",
+        url: "#",
+      },
+      {
+        text: "Gitbook",
+        url: "#",
+      },
+    ],
+  },
+  community: {
+    title: "Community",
+    links: [
+      {
+        text: "Discord",
+        url: "#",
+      },
+      {
+        text: "Telegram",
+        url: "#",
+      },
+      {
+        text: "Meduim",
+        url: "#",
+      },
+      {
+        text: "Twitter",
+        url: "#",
+      },
+    ],
+  },
+  resources: {
+    title: "Resources",
+    links: [
+      {
+        text: "Widget",
+        url: "#",
+      },
+      {
+        text: "Media Kit",
+        url: "#",
+      },
+    ],
+  },
+};

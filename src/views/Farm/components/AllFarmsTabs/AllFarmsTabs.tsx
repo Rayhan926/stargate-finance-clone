@@ -26,7 +26,7 @@ const AllFarmsTabs = () => {
                   className={cx(
                     "font-poppins text-base",
                     isActive
-                      ? "underline text-white"
+                      ? " text-white"
                       : "text-[#999999] hover:text-white",
                   )}
                 >

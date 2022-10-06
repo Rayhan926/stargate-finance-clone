@@ -35,6 +35,7 @@ export type Network = {
 export type HeaderNavigationItems = {
   text: string;
   url: string;
+  icon?: ReactNode;
 };
 
 export type SelectOption = {
@@ -57,4 +58,21 @@ export type AllFarm = {
   network: Netoworks;
   liquidity: string;
   apy: string;
+};
+
+export type RoadmapBlockProps = {
+  progressPercentage: number;
+  labelText: string;
+  title: string;
+  subtitle: string;
+  imgSrc: string;
+  layout?: "reverse";
+};
+
+export type FooterLinks = {
+  title: string;
+  links: {
+    text: string;
+    url: string;
+  }[];
 };
