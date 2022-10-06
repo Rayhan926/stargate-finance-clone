@@ -4,7 +4,10 @@ import FarmTab from "./components/FarmTab";
 
 const Farm = () => {
   return (
-    <div className="strokes_bg" style={{ backgroundPositionY: "-200px" }}>
+    <div
+      className="strokes_bg mb-[124px]"
+      style={{ backgroundPositionY: "-200px" }}
+    >
       {/** Top section --Start-- */}
       <section className="mt-[160px]">
         <div className="container">

@@ -3,6 +3,8 @@ import { cx } from "@utils";
 import Select from "@components/Select";
 
 import { allFarmsTabs, chainsOptions, tokensOptions } from "@config/constants";
+import { useAtom } from "jotai";
+import { selectedNetworkAtom, selectedTokenAtom } from "@atoms";
 
 const AllFarmsTabs = () => {
   const [activeChain, setActiveChain] = useState(chainsOptions[0]);
@@ -10,6 +12,9 @@ const AllFarmsTabs = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const activeTabBody = allFarmsTabs[activeTabIndex].component;
+
+  const [, setSelectedToken] = useAtom(selectedTokenAtom);
+  const [, setSelectedNetwork] = useAtom(selectedNetworkAtom);
 
   return (
     <section className="mt-[64px]">
@@ -39,13 +44,19 @@ const AllFarmsTabs = () => {
           <div className="flex items-center flex-wrap gap-4 md:gap-6">
             <Select
               label="Token"
-              onChange={(opt) => setActiveToken(opt)}
+              onChange={(opt) => {
+                setActiveToken(opt);
+                setSelectedToken(opt.value === "all" ? null : opt.label);
+              }}
               options={tokensOptions}
               value={activeToken}
             />
             <Select
               label="Network"
-              onChange={(opt) => setActiveChain(opt)}
+              onChange={(opt) => {
+                setActiveChain(opt);
+                setSelectedNetwork(opt.value === "all" ? null : opt.value);
+              }}
               options={chainsOptions}
               value={activeChain}
             />

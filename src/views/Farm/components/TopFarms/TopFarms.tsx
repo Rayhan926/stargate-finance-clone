@@ -9,7 +9,7 @@ const TopFarms = () => {
         ({ logo, apy, farmName, liquidity, logoSml, lpt, network }, i) => {
           return (
             <div
-              className="min-w-[258px] cursor-pointer min-h-[175px] rounded-[0.75rem] bg-[#31333C] p-4 relative"
+              className="min-w-[258px] cursor-pointer min-h-[175px] border border-transparent hover:border-white/80 duration-150 rounded-[0.75rem] bg-[#31333C] p-4 relative"
               key={i}
             >
               {/** divider --Start-- */}

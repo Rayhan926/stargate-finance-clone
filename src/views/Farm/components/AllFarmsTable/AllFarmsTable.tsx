@@ -1,10 +1,27 @@
+import { selectedNetworkAtom, selectedTokenAtom } from "@atoms";
 import NetworkLabel from "@components/NetworkLabel";
 
 import { allFarms } from "@config/constants";
+import { useAtom } from "jotai";
 
 import React from "react";
 
 const AllFarmsTable = () => {
+  const [selectedToken] = useAtom(selectedTokenAtom);
+  const [selectedNetwork] = useAtom(selectedNetworkAtom);
+
+  const filteredByTokenFarms = allFarms.filter((farm) => {
+    if (!selectedToken) return true;
+
+    return farm.name.title === selectedToken;
+  });
+
+  const filteredByNetworkFarms = filteredByTokenFarms.filter((farm) => {
+    if (!selectedNetwork) return true;
+
+    return farm.network === selectedNetwork;
+  });
+
   return (
     <>
       {/** Table --Start-- */}
@@ -20,7 +37,7 @@ const AllFarmsTable = () => {
           </thead>
 
           <tbody>
-            {allFarms.map((farm, i) => {
+            {filteredByNetworkFarms.map((farm, i) => {
               return (
                 <tr key={i} className="hover:bg-[#333233] cursor-pointer">
                   <td className="px-8 h-[76px]">
