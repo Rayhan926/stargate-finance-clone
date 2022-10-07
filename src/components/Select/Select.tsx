@@ -52,7 +52,7 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
           ref={setPopperElement}
           style={styles.popper}
           {...attributes.popper}
-          className="w-full"
+          className={cx("w-full", !isOpen && "pointer-events-none")}
         >
           <div
             className={cx(
