@@ -1,8 +1,10 @@
 import NetworkLabel from "@components/NetworkLabel";
 import { topFarms } from "@config/constants";
+import { useRouter } from "next/router";
 import React from "react";
 
 const TopFarms = () => {
+  const router = useRouter();
   return (
     <div className="grid grid-cols-[repeat(8,1fr)] md:grid-cols-[repeat(4,1fr)] gap-[13px] overflow-x-auto scrollbar_none">
       {topFarms.map(
@@ -11,6 +13,7 @@ const TopFarms = () => {
             <div
               className="min-w-[258px] cursor-pointer min-h-[175px] border border-transparent hover:border-white/80 duration-150 rounded-[0.75rem] bg-[#31333C] p-4 relative"
               key={i}
+              onClick={() => router.push(`/pool/${farmName}/add`)}
             >
               {/** divider --Start-- */}
               <div className="w-px h-[70px] bg-white/10 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>

@@ -24,6 +24,21 @@ body {
   }
 }
 
+.tvl_charts .recharts-tooltip-wrapper {
+  @apply hidden;
+}
+
+.tvl_charts .recharts-curve.recharts-tooltip-cursor {
+  @apply stroke-primary;
+}
+html.dark .tvl_charts .recharts-curve.recharts-tooltip-cursor {
+  stroke: rgb(255, 255, 255, 0.1) !important;
+}
+
+.tvl_charts .recharts-layer.recharts-active-dot circle {
+  @apply fill-[#9C5DDC] stroke-white;
+}
+
 .scrollbar_none::-webkit-scrollbar {
   display: none;
 }
