@@ -14,7 +14,7 @@ const Transfer = () => {
   return (
     <div
       style={{ marginTop: headerHeight }}
-      className="py-10 lg:py-20 flex justify-center"
+      className="py-10 lg:py-20 flex justify-center container"
     >
       <div className="w-[545px] bg-[#31333C] border border-white/20 rounded-[30px] overflow-hidden relative">
         {/** Header --Start-- */}
