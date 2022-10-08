@@ -60,6 +60,17 @@ export type AllFarm = {
   apy: string;
 };
 
+export type AllPools = {
+  name: {
+    title: string;
+    icon: ReactNode;
+  };
+  network: Netoworks;
+  liquidity: string;
+  vol24: string;
+  vol7d: string;
+};
+
 export type RoadmapBlockProps = {
   progressPercentage: number;
   labelText: string;

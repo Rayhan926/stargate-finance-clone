@@ -19,7 +19,7 @@ import USDC from "@components/Svgs/USDC";
 import USDT from "@components/Svgs/USDT";
 import AllFarmsTable from "@views/Farm/components/AllFarmsTable";
 import TabEmptyBoxRow from "@views/Farm/components/TabEmptyBoxRow";
-import { BiTransfer, BiBarChartSquare } from "react-icons/bi";
+import { BiTransfer } from "react-icons/bi";
 import { MdWaves } from "react-icons/md";
 
 import TopFarms from "@views/Farm/components/TopFarms";
@@ -27,6 +27,7 @@ import YourFarmsTable from "@views/Farm/components/YourFarmsTable";
 
 import {
   AllFarm,
+  AllPools,
   Farm,
   FarmTab,
   FooterLinks,
@@ -35,6 +36,8 @@ import {
   RoadmapBlockProps,
   SelectOption,
 } from "./types";
+import AllPoolsTable from "@views/Pool/components/AllPoolsTable";
+import YourPoolsTable from "@views/Pool/components/YourPoolsTable";
 
 export const farmTabs: FarmTab[] = [
   {
@@ -55,6 +58,17 @@ export const farmTabs: FarmTab[] = [
   },
 ];
 
+export const topPoolTabs: FarmTab[] = [
+  {
+    title: "Your Pools",
+    component: <TabEmptyBoxRow />,
+  },
+  {
+    title: "Top Pools",
+    component: <TopFarms />,
+  },
+];
+
 export const allFarmsTabs: FarmTab[] = [
   {
     title: "All Farms",
@@ -63,6 +77,17 @@ export const allFarmsTabs: FarmTab[] = [
   {
     title: "Your Farms",
     component: <YourFarmsTable />,
+  },
+];
+
+export const allPoolsTabs: FarmTab[] = [
+  {
+    title: "All Pools",
+    component: <AllPoolsTable />,
+  },
+  {
+    title: "Your Pools",
+    component: <YourPoolsTable />,
   },
 ];
 
@@ -197,7 +222,7 @@ export const farms: Farm[] = [];
 export const headerNavigationItems: HeaderNavigationItems[] = [
   {
     text: "Transfer",
-    url: "#",
+    url: "/transfer",
     icon: <BiTransfer size={18} />,
   },
   {
@@ -239,11 +264,11 @@ export const headerNavigationItems: HeaderNavigationItems[] = [
       </svg>
     ),
   },
-  {
-    text: "Overview",
-    url: "/overview",
-    icon: <BiBarChartSquare size={18} />,
-  },
+  // {
+  //   text: "Overview",
+  //   url: "/overview",
+  //   icon: <BiBarChartSquare size={18} />,
+  // },
 ];
 
 export const tokensOptions: SelectOption[] = [
@@ -450,6 +475,160 @@ export const allFarms: AllFarm[] = [
     network: "optimism",
     liquidity: "$1,174,941.75",
     apy: "5.05%",
+  },
+];
+
+export const allPools: AllPools[] = [
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "ethereum",
+    liquidity: "$90,482,975.07",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+
+  {
+    name: {
+      title: "USDT",
+      icon: <USDT />,
+    },
+    network: "ethereum",
+    liquidity: "$90,482,975.07",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "ETH",
+      icon: <ETH />,
+    },
+    network: "ethereum",
+    liquidity: "$22,439,267.39",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDT",
+      icon: <USDT />,
+    },
+    network: "bnb",
+    liquidity: "$34,558,726.87",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "BUSD",
+      icon: <BUSD />,
+    },
+    network: "bnb",
+    liquidity: "$39,274,392.06",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "avalanche",
+    liquidity: "$56,697,899.56",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDT",
+      icon: <USDT />,
+    },
+    network: "avalanche",
+    liquidity: "$44,507,384.31",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "matic",
+    liquidity: "$18,329,205.78",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDT",
+      icon: <USDT />,
+    },
+    network: "matic",
+    liquidity: "$19,406,942.99",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "arbitrum",
+    liquidity: "$42,814,735.95",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDT",
+      icon: <USDT />,
+    },
+    network: "arbitrum",
+    liquidity: "$12,366,697.77",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "ETH",
+      icon: <ETH />,
+    },
+    network: "arbitrum",
+    liquidity: "$2,758,725.42",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "fantom",
+    liquidity: "$21,692,964.17",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "USDC",
+      icon: <USDC />,
+    },
+    network: "optimism",
+    liquidity: "$10,201,660.86",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
+  },
+  {
+    name: {
+      title: "ETH",
+      icon: <ETH />,
+    },
+    network: "optimism",
+    liquidity: "$1,174,941.75",
+    vol24: "$9,775,287.88",
+    vol7d: "$13,518,789.85",
   },
 ];
 

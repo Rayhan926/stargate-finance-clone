@@ -8,7 +8,12 @@ const MobileNavogationBar = () => {
   const router = useRouter();
   return (
     <div className="sticky bottom-0 left-0 w-full z-50 bg-[#30333C] lg:hidden">
-      <nav className="grid grid-cols-5">
+      <nav
+        className="grid"
+        style={{
+          gridTemplateColumns: `repeat(${headerNavigationItems.length}, 1fr)`,
+        }}
+      >
         {headerNavigationItems.map((item, i) => {
           const isActive = router.pathname === item.url;
           return (

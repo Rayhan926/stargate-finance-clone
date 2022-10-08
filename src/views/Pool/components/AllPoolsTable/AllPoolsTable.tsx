@@ -1,16 +1,16 @@
-import { farmsSelectedNetworkAtom, farmsSelectedTokenAtom } from "@atoms";
+import { poolsSelectedNetworkAtom, poolsSelectedTokenAtom } from "@atoms";
 import NetworkLabel from "@components/NetworkLabel";
 
-import { allFarms } from "@config/constants";
+import { allPools } from "@config/constants";
 import { useAtom } from "jotai";
 
 import React from "react";
 
-const AllFarmsTable = () => {
-  const [selectedToken] = useAtom(farmsSelectedTokenAtom);
-  const [selectedNetwork] = useAtom(farmsSelectedNetworkAtom);
+const AllPoolsTable = () => {
+  const [selectedToken] = useAtom(poolsSelectedTokenAtom);
+  const [selectedNetwork] = useAtom(poolsSelectedNetworkAtom);
 
-  const filteredByTokenFarms = allFarms.filter((farm) => {
+  const filteredByTokenFarms = allPools.filter((farm) => {
     if (!selectedToken) return true;
 
     return farm.name.title === selectedToken;
@@ -32,7 +32,8 @@ const AllFarmsTable = () => {
               <th>Name</th>
               <th>Network</th>
               <th>Liquidity</th>
-              <th className="text-right lg:w-[203px]">APY</th>
+              <th>Volume (24h)</th>
+              <th>Volume (7d)</th>
             </tr>
           </thead>
 
@@ -54,8 +55,11 @@ const AllFarmsTable = () => {
                   <td className="px-8 h-[76px] text-[16px] font-poppins leading-[19px]">
                     {farm.liquidity}
                   </td>
-                  <td className="px-8 h-[76px] text-[16px] font-poppins leading-[19px] text-right lg:w-[203px]">
-                    {farm.apy}
+                  <td className="px-8 h-[76px] text-[16px] font-poppins leading-[19px]">
+                    {farm.vol24}
+                  </td>
+                  <td className="px-8 h-[76px] text-[16px] font-poppins leading-[19px]">
+                    {farm.vol7d}
                   </td>
                 </tr>
               );
@@ -68,4 +72,4 @@ const AllFarmsTable = () => {
   );
 };
 
-export default AllFarmsTable;
+export default AllPoolsTable;
