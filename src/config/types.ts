@@ -87,3 +87,41 @@ export type FooterLinks = {
     url: string;
   }[];
 };
+
+export type Token = {
+  name: string;
+  logo: ReactNode;
+  value: string;
+};
+
+export type NetworkType = {
+  name: string;
+  logo: ReactNode;
+  value: string;
+};
+export type SelectTokenDrawerProps = {
+  open: boolean;
+  onClose: () => void;
+  onSelect: (option: Token) => void;
+};
+
+export type TransferForm = {
+  from: {
+    token: Token | undefined;
+    network: NetworkType | undefined;
+  };
+  to: {
+    token: Token | undefined;
+    network: NetworkType | undefined;
+  };
+};
+
+export type TokenSelectProps = {
+  value: Token | undefined;
+  onSelect: (token: Token) => void;
+};
+
+export type NetworkSelectProps = {
+  value: NetworkType | undefined;
+  onSelect: (token: NetworkType) => void;
+};
