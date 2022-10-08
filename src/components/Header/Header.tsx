@@ -32,7 +32,7 @@ function Header() {
         <nav className="hidden lg:block">
           <ul className="flex items-center">
             {headerNavigationItems.map(({ text, url }, i) => {
-              const isActive = url === router.pathname;
+              const isActive = router.pathname.startsWith(url);
               return (
                 <li key={i} className="px-[1.25rem]">
                   <Link href={url}>

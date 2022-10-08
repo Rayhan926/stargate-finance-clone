@@ -80,7 +80,6 @@ const AdvancedSettings = ({ onClose, open }: AdvancedSettingsProps) => {
           </div>
           <input
             type="number"
-            readOnly
             id="total_amount"
             className="bg-transparent w-full py-[15px] leading-7 border  border-white/30 rounded-xl placeholder:text-[#CCCCCC]/50 pl-[44px] outline-none pr-[78px]"
             placeholder="0.00548575272"
@@ -125,7 +124,7 @@ const AdvancedSettings = ({ onClose, open }: AdvancedSettingsProps) => {
               value={slippageTolerance}
               onChange={(e) => setSlippageTolerance(parseInt(e.target.value))}
               type="number"
-              className="border border-white/30 leading-7 py-[15px] text-base text-white/70 bg-transparent rounded-xl w-full pl-5 pr-10"
+              className="border outline-none border-white/30 leading-7 py-[15px] text-base text-white/70 bg-transparent rounded-xl w-full pl-5 pr-10"
             />
             <span className="inline-block absolute right-0 top-1/2 -translate-y-1/2 px-5 text-white/70">
               %

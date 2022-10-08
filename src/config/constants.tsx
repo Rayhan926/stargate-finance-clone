@@ -19,7 +19,7 @@ import USDC from "@components/Svgs/USDC";
 import USDT from "@components/Svgs/USDT";
 import AllFarmsTable from "@views/Farm/components/AllFarmsTable";
 import TabEmptyBoxRow from "@views/Farm/components/TabEmptyBoxRow";
-import { BiTransfer } from "react-icons/bi";
+import { BiBarChartSquare, BiTransfer } from "react-icons/bi";
 import { MdWaves } from "react-icons/md";
 
 import TopFarms from "@views/Farm/components/TopFarms";
@@ -264,11 +264,11 @@ export const headerNavigationItems: HeaderNavigationItems[] = [
       </svg>
     ),
   },
-  // {
-  //   text: "Overview",
-  //   url: "/overview",
-  //   icon: <BiBarChartSquare size={18} />,
-  // },
+  {
+    text: "Overview",
+    url: "/overview",
+    icon: <BiBarChartSquare size={18} />,
+  },
 ];
 
 export const tokensOptions: SelectOption[] = [
