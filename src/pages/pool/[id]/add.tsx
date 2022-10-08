@@ -5,7 +5,7 @@ import React from "react";
 const AddPoolPage = () => {
   const [headerHeight] = useHeaderHeight();
   return (
-    <div style={{ marginTop: headerHeight }}>
+    <div style={{ marginTop: headerHeight + 50 }}>
       <AddPool />
     </div>
   );
