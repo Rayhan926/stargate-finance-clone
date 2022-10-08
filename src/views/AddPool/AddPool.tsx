@@ -6,8 +6,8 @@ import WalletInfoRow from "./components/WalletInfoRow";
 
 function AddPool() {
   return (
-    <div className="md:max-w-[400px] w-full mx-auto mb-[100px]">
-      <ul className="flex pl-3 md:pl-0 items-center gap-1 text-[#999999] font-roc-grotesk font-medium leading-6 text-base my-5">
+    <div className="md:max-w-[400px] w-full mx-auto mb-[100px] container">
+      <ul className="flex items-center gap-1 text-[#999999] font-roc-grotesk font-medium leading-6 text-base my-5">
         <li>
           <button className="hover:text-white">Pool</button>
         </li>
@@ -15,7 +15,7 @@ function AddPool() {
           <AiOutlineRight size={10} />
         </li>
         <li>
-          <button className="hover:text-white">
+          <button className="text-white">
             ETH<span className="text-xs">OPTIMISM</span>
           </button>
         </li>
