@@ -104,6 +104,10 @@ export type SelectTokenDrawerProps = {
   onClose: () => void;
   onSelect: (option: Token) => void;
 };
+export type AdvancedSettingsProps = {
+  open: boolean;
+  onClose: () => void;
+};
 
 export type TransferForm = {
   from: {
