@@ -1,11 +1,14 @@
 import { useHeaderHeight } from "@atoms";
 import useTransferForm from "@hooks/useTransferForm";
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineTune } from "react-icons/md";
+import AdvancedSettings from "./components/AdvancedSettings";
 import NetworkSelect from "./components/NetworkSelect";
 import TokenSelect from "./components/TokenSelect";
+import YouWillReceiveDropdown from "./components/YouWillReceiveDropdown";
 
 const Transfer = () => {
+  const [isOpenAdvancedSettings, setIsOpenAdvancedSettings] = useState(false);
   const { setFromToken, fromData, setNetwork, swapFromTo } = useTransferForm();
   const [headerHeight] = useHeaderHeight();
   return (
@@ -13,13 +16,17 @@ const Transfer = () => {
       style={{ marginTop: headerHeight }}
       className="py-10 lg:py-20 flex justify-center"
     >
-      <div className="w-[545px] bg-[#31333C] border border-white/20 rounded-[30px] h-[754px] overflow-hidden relative">
+      <div className="w-[545px] bg-[#31333C] border border-white/20 rounded-[30px] overflow-hidden relative">
         {/** Header --Start-- */}
         <div className="flex justify-between items-center px-8 py-5 border-b border-white/20">
           <h1 className="text-xl font-semibold">Trasfer</h1>
-          <button>
+          <button onClick={() => setIsOpenAdvancedSettings(true)}>
             <MdOutlineTune size={24} />
           </button>
+          <AdvancedSettings
+            open={isOpenAdvancedSettings}
+            onClose={() => setIsOpenAdvancedSettings(false)}
+          />
         </div>
         {/** Header --End-- */}
 
@@ -63,7 +70,7 @@ const Transfer = () => {
           {/** Swap Button --End-- */}
           {/** To --Start-- */}
           <div>
-            <p className="mb-4">From</p>
+            <p className="mb-4">To</p>
             <div className="flex">
               <TokenSelect onSelect={setFromToken} value={fromData.to.token} />
               <NetworkSelect
@@ -80,7 +87,7 @@ const Transfer = () => {
             <div className="relative">
               <input
                 type="text"
-                className="border border-white/10 rounded-xl h-[55px] pl-5 outline-none bg-transparent w-full pr-[90px]"
+                className="border border-white/10 rounded-xl focus:border-white/50 h-[55px] pl-5 outline-none bg-transparent w-full pr-[90px]"
                 placeholder="0.0"
               />
 
@@ -90,6 +97,27 @@ const Transfer = () => {
             </div>
           </div>
           {/** Total Amount --End-- */}
+
+          <YouWillReceiveDropdown />
+
+          <button className="bg-primary mt-7 w-full duration-200 font-poppins text-white py-4 px-5 justify-center rounded-xl flex items-center gap-2">
+            <svg
+              width={16}
+              height={14}
+              className="shrink-0"
+              viewBox="0 0 16 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12.3267 4.28635H15.5C15.5 1.73844 13.9733 0.25 11.3867 0.25H4.61333C2.02667 0.25 0.5 1.73844 0.5 4.25385V9.74615C0.5 12.2616 2.02667 13.75 4.61333 13.75H11.3867C13.9733 13.75 15.5 12.2616 15.5 9.74615V9.51216H12.3267C10.8539 9.51216 9.66 8.34814 9.66 6.91225C9.66 5.47637 10.8539 4.31235 12.3267 4.31235V4.28635ZM12.3267 5.40431H14.94C15.2493 5.40431 15.5 5.64875 15.5 5.95029V7.84822C15.4964 8.14829 15.2478 8.39069 14.94 8.3942H12.3867C11.6411 8.40398 10.9891 7.90628 10.82 7.19824C10.7353 6.75872 10.8542 6.30517 11.1448 5.95916C11.4354 5.61315 11.868 5.41006 12.3267 5.40431ZM12.44 7.39974H12.6867C13.0033 7.39974 13.26 7.14947 13.26 6.84076C13.26 6.53204 13.0033 6.28178 12.6867 6.28178H12.44C12.2886 6.28004 12.1427 6.33748 12.035 6.44128C11.9273 6.54508 11.8667 6.6866 11.8667 6.83426C11.8666 7.14404 12.1223 7.39617 12.44 7.39974ZM4.05333 4.28635H8.28667C8.60331 4.28635 8.86 4.03609 8.86 3.72737C8.86 3.41866 8.60331 3.16839 8.28667 3.16839H4.05333C3.73928 3.16837 3.48365 3.4147 3.48 3.72087C3.47998 4.03066 3.73561 4.28279 4.05333 4.28635Z"
+                fill="white"
+              />
+            </svg>
+            Connect Wallet
+          </button>
         </div>
         {/** Body --End-- */}
       </div>
