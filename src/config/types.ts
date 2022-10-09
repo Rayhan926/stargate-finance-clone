@@ -129,3 +129,14 @@ export type NetworkSelectProps = {
   value: NetworkType | undefined;
   onSelect: (token: NetworkType) => void;
 };
+
+export type TransfersTableType = {
+  sourceToken: string;
+  destinationToken: string;
+  sourceNetwork: Netoworks;
+  destinationNetwork: Netoworks;
+  amount: string;
+  value: string;
+  account: string;
+  time: string;
+};

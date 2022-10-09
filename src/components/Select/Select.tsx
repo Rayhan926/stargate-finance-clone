@@ -25,7 +25,7 @@ const Select = ({ options, onChange, value, label }: SelectProps) => {
 
   return (
     <div className="w-auto md:w-[184px]">
-      <p className="mb-2.5 text-white">Token</p>
+      <p className="mb-2.5 text-white">{label}</p>
       <div ref={clickAwayRef} className="relative">
         <div
           onClick={() => setisOpen((prev) => !prev)}

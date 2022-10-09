@@ -1,6 +1,8 @@
 import { useHeaderHeight } from "@atoms";
 import dynamic from "next/dynamic";
 import React from "react";
+import PoolsTable from "./components/PoolsTable";
+import TransfersTable from "./components/TransfersTable";
 const TVLChart = dynamic(() => import("./components/TVLChart"), { ssr: false });
 const VolumeChart = dynamic(() => import("./components/VolumeChart"), {
   ssr: false,
@@ -36,6 +38,8 @@ const Overview = () => {
           <VolumeChart />
           <TransactionsChart />
         </div>
+        <TransfersTable />
+        <PoolsTable />
       </div>
     </div>
   );

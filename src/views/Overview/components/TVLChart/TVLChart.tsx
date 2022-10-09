@@ -44,7 +44,7 @@ const TVLChart = () => {
           <p className="text-[11px] text-white/50">Jan 29, 2022 (UTC)</p>
         </div>
 
-        <div className="tvl_charts px-4">
+        <div className="tvl_charts px-2.5">
           <ResponsiveContainer width={"100%"} height={250}>
             <AreaChart
               width={600}
@@ -56,6 +56,11 @@ const TVLChart = () => {
                 } else {
                   setaActiveValue(`$${data[0].uv}m`);
                 }
+              }}
+              margin={{
+                top: 0,
+                right: 15,
+                left: 15,
               }}
             >
               <defs>

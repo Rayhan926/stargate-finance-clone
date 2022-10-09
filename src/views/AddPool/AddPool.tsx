@@ -67,7 +67,7 @@ function AddPool() {
                 <input
                   type="number"
                   id="total_amount"
-                  className="bg-[#1A1A1A] w-full p-[13px] border border-[#CCCCCC]/20 rounded-xl placeholder:text-[#CCCCCC]/50 pl-[42px] focus:border-[#CCCCCC] pr-[78px]"
+                  className="bg-[#1A1A1A] w-full p-[13px] border outline-none border-[#CCCCCC]/20 rounded-xl placeholder:text-[#CCCCCC]/50 pl-[42px] focus:border-[#CCCCCC] pr-[78px]"
                   placeholder="0"
                 />
                 <button

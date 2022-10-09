@@ -19,7 +19,7 @@ const Transfer = () => {
       <div className="w-[545px] bg-[#31333C] border border-white/20 rounded-[30px] overflow-hidden relative">
         {/** Header --Start-- */}
         <div className="flex justify-between items-center px-8 py-5 border-b border-white/20">
-          <h1 className="text-xl font-semibold">Trasfer</h1>
+          <h1 className="text-xl font-semibold">Transfer</h1>
           <button onClick={() => setIsOpenAdvancedSettings(true)}>
             <MdOutlineTune size={24} />
           </button>

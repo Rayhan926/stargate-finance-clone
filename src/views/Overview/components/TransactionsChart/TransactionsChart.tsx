@@ -113,8 +113,8 @@ const TransactionsChart = () => {
                 axisLine={false}
                 tickLine={false}
                 tick={{
-                  fill: "rgba(255,255,255,0.4)",
-                  fontSize: 15,
+                  fill: "rgba(255,255,255,0.6)",
+                  fontSize: 12,
                 }}
               />
               <Tooltip cursor={{ fill: "transparent" }} />
