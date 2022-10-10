@@ -16,7 +16,7 @@ const RoadmapBlock = ({
   return (
     <div
       className={cx(
-        "flex items-start lg:justify-between lg:items-center flex-col gap-y-6",
+        "flex items-start lg:justify-between lg:items-center flex-col-reverse gap-y-6",
         isReversed ? "lg:flex-row-reverse" : "lg:flex-row",
       )}
     >
