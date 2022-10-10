@@ -749,7 +749,11 @@ export const transferTableDate: TransfersTableType[] = [
 
 export const roadmapBlocks: RoadmapBlockProps[] = [
   {
-    imgSrc: "/img/guennyou-01.png",
+    img: {
+      src: "/img/guennyou-01.png",
+      width: 1555,
+      height: 1104,
+    },
     labelText: "Transfer",
     title:
       "Swap 1:1 native assets cross-chain, accessing Stargate’s unified liquidity pools.",
@@ -758,7 +762,11 @@ export const roadmapBlocks: RoadmapBlockProps[] = [
     progressPercentage: 30,
   },
   {
-    imgSrc: "/img/guennyou-02.png",
+    img: {
+      src: "/img/guennyou-02.png",
+      width: 1551,
+      height: 967,
+    },
     labelText: "Pools",
     title:
       "Add liquidity to Stargate’s Omnichain protocol and earn stablecoin rewards on every Stargate transfer.",
@@ -768,7 +776,11 @@ export const roadmapBlocks: RoadmapBlockProps[] = [
     layout: "reverse",
   },
   {
-    imgSrc: "/img/guennyou-03.png",
+    img: {
+      src: "/img/guennyou-03.png",
+      width: 1554,
+      height: 964,
+    },
     labelText: "Farms",
     title:
       "Stargate liquidity providers can farm their LP tokens in exchange for STG rewards.",
@@ -776,7 +788,11 @@ export const roadmapBlocks: RoadmapBlockProps[] = [
     progressPercentage: 70,
   },
   {
-    imgSrc: "/img/guennyou-04.png",
+    img: {
+      src: "/img/guennyou-04.png",
+      width: 1554,
+      height: 967,
+    },
     labelText: "Stake",
     title:
       "STG holders can lock their STG tokens to receive veSTG, Stargate’s governance token.",

@@ -76,7 +76,11 @@ export type RoadmapBlockProps = {
   labelText: string;
   title: string;
   subtitle: string;
-  imgSrc: string;
+  img: {
+    src: string;
+    width: number;
+    height: number;
+  };
   layout?: "reverse";
 };
 
