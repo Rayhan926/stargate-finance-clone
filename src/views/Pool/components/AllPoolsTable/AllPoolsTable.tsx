@@ -3,12 +3,14 @@ import NetworkLabel from "@components/NetworkLabel";
 
 import { allPools } from "@config/constants";
 import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 
 import React from "react";
 
 const AllPoolsTable = () => {
   const [selectedToken] = useAtom(poolsSelectedTokenAtom);
   const [selectedNetwork] = useAtom(poolsSelectedNetworkAtom);
+  const router = useRouter();
 
   const filteredByTokenFarms = allPools.filter((farm) => {
     if (!selectedToken) return true;
@@ -40,7 +42,11 @@ const AllPoolsTable = () => {
           <tbody>
             {filteredByNetworkFarms.map((farm, i) => {
               return (
-                <tr key={i} className="hover:bg-[#333233] cursor-pointer">
+                <tr
+                  onClick={() => router.push("/pool/ETH/add")}
+                  key={i}
+                  className="hover:bg-[#333233] cursor-pointer"
+                >
                   <td className="px-8 h-[76px]">
                     <div className="flex items-center gap-2.5">
                       <div className="w-6">{farm.name.icon}</div>

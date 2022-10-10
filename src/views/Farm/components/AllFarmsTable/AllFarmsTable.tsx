@@ -3,10 +3,12 @@ import NetworkLabel from "@components/NetworkLabel";
 
 import { allFarms } from "@config/constants";
 import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 
 import React from "react";
 
 const AllFarmsTable = () => {
+  const router = useRouter();
   const [selectedToken] = useAtom(farmsSelectedTokenAtom);
   const [selectedNetwork] = useAtom(farmsSelectedNetworkAtom);
 
@@ -39,7 +41,11 @@ const AllFarmsTable = () => {
           <tbody>
             {filteredByNetworkFarms.map((farm, i) => {
               return (
-                <tr key={i} className="hover:bg-[#333233] cursor-pointer">
+                <tr
+                  onClick={() => router.push("/pool/ETH/add")}
+                  key={i}
+                  className="hover:bg-[#333233] cursor-pointer"
+                >
                   <td className="px-8 h-[76px]">
                     <div className="flex items-center gap-2.5">
                       <div className="w-6">{farm.name.icon}</div>
