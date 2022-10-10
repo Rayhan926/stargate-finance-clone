@@ -28,8 +28,8 @@ const RoadmapBlock = ({
         </h3>
         <p className="__body_text mt-2">{subtitle}</p>
       </div>
-      <div className="[&>span]:!block">
-        <Image src={imgSrc} width={354} height={182} alt={labelText} />
+      <div className="[&>span]:!block max-w-[400px]">
+        <Image src={imgSrc} width={1554} height={964} alt={labelText} />
       </div>
     </div>
   );
