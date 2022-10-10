@@ -9,7 +9,7 @@ function HeroSection() {
       }}
       className="h-screen flex justify-center items-center relative bg-no-repeat bg-center"
     >
-      <div className="container mt-2">
+      <div className="container mt-6">
         <h1 className="text-primary font-poppins font-medium text-[30px] leading-[30px] tracking-[-0.03em] text-center">
           Welcome to the omnichain future
         </h1>
